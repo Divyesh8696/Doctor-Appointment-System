@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# 🩺 Doctor Appointment Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive MERN stack application designed to streamline doctor appointment bookings, patient management, and administrative oversight. This system provides a seamless experience for patients, healthcare providers, and administrators.
 
-## Available Scripts
+## 🚀 Key Features
 
-In the project directory, you can run:
+### 👤 Patient Features
+- **Easy Registration & Login**: Secure authentication for patients.
+- **Service Browsing**: Explore various healthcare services offered.
+- **Appointment Booking**: Real-time scheduling of appointments with preferred providers.
+- **My Appointments**: View and manage upcoming and past appointments.
 
-### `npm start`
+### 👨‍⚕️ Provider Features
+- **Appointment Management**: View and process patient appointments.
+- **Service Management**: Define and update the services offered.
+- **Dashboard**: Track daily schedules and patient interactions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🛠️ Admin Features
+- **System Statistics**: Real-time dashboard with key metrics.
+- **User Management**: Oversee patient and provider accounts.
+- **Audit Logs**: Track system-wide activities for security and transparency.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛡️ Security & Performance
+Built with industry-standard security practices:
+- **JWT Authentication**: Secure stateless authentication using JSON Web Tokens.
+- **Input Sanitization**: Protection against NoSQL Injection (`express-mongo-sanitize`).
+- **Security Headers**: Enhanced security using `Helmet`.
+- **Rate Limiting**: Prevention of brute-force attacks (`express-rate-limit`).
+- **XSS Protection**: Sanitization of user input to prevent Cross-Site Scripting (`xss-clean`).
+- **Data Protection**: Prevent Parameter Pollution (`hpp`).
 
-### `npm test`
+## 💻 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend:**
+- React (Hooks, Router)
+- Axios for API communication
+- Professional CSS styling
 
-### `npm run build`
+**Backend:**
+- Node.js & Express
+- MongoDB with Mongoose ODM
+- JWT for secure sessions
+- Morgan for logging
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+├── backend/
+│   ├── config/         # Database configuration
+│   ├── controllers/    # Route controllers (logic)
+│   ├── middleware/     # Auth and security middleware
+│   ├── models/         # Mongoose schemas
+│   ├── routes/         # API endpoints
+│   └── server.js       # Entry point
+├── frontend/
+│   ├── src/
+│   │   ├── components/ # Reusable UI components
+│   │   ├── pages/      # Full-page components
+│   │   └── services/   # API abstraction layer
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Installation & Setup
 
-### `npm run eject`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Divyesh8696/Doctor-Appointment-System.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Backend Setup:**
+   ```bash
+   cd backend
+   npm install
+   # Create a .env file based on .env.example
+   npm run dev
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Frontend Setup:**
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is licensed under the ISC License.
