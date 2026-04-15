@@ -1,0 +1,141 @@
+.home-container {
+    padding: 0;
+    text-align: center;
+    background: white;
+}
+
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.home-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-nav {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-register-nav {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn-register-nav:hover {
+    background: var(--secondary-color);
+}
+
+.home-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 0;
+    margin-bottom: 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.home-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.feature-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.security-details {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.security-details h2 {
+    text-align: center;
+}
+
+.security-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.security-details li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.security-details li:last-child {
+    border-bottom: none;
+}
+
+.home-footer {
+    margin-top: 3rem;
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        padding: 2rem 1rem;
+    }
+
+    .home-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,213 @@
+/* Global Medical/Secure Theme */
+:root {
+  --primary-color: #0b3d91;
+  /* Secure Blue */
+  --secondary-color: #4facfe;
+  /* Trust Teal */
+  --accent-color: #e74c3c;
+  /* Alert Red */
+  --success-color: #2ecc71;
+  /* Safe Green */
+  --background-color: #f4f6f9;
+  /* Clinical Light Grey */
+  --card-bg: #ffffff;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-dark);
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Card Components */
+.card,
+.auth-card,
+.dashboard-card,
+.service-card,
+.appointment-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.dashboard-card:hover,
+.service-card:hover,
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Buttons */
+button,
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  box-shadow: 0 4px 6px rgba(11, 61, 145, 0.2);
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #ecf0f1;
+  color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #bdc3c7;
+}
+
+.btn-danger {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Form Styles */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  /* Ensure padding doesn't overflow */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.error-message {
+  background-color: #fdedec;
+  color: var(--accent-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #e8f8f5;
+  color: var(--success-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--success-color);
+  font-weight: 500;
+}
+
+/* Secured App Footer Badge */
+.security-badge {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  font-family: monospace;
+}
+
+.security-badge span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eef2f7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.lock-icon {
+  color: var(--success-color);
+}
